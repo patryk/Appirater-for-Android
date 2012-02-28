@@ -2,6 +2,7 @@ package com.zemariamm.appirater;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -103,7 +104,11 @@ public class AppirateUtils {
 					AppirateUtils.markNeverRate(context);
 					Uri uri = Uri.parse(marketLink);
 					Intent intent = new Intent(Intent.ACTION_VIEW,uri);
-					context.startActivity(intent);
+					try {
+						context.startActivity(intent);
+					} catch (ActivityNotFoundException e) {
+						Log.e(this.toString(), "Unable to open Android Market.", e);
+					}
 					dialog.dismiss();
 			}
 		}).setNeutralButton("Remind me later", new OnClickListener() {

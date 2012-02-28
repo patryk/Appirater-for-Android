@@ -16,7 +16,7 @@ import android.os.Bundle;
 import android.util.Log;
 
 public class AppirateUtils {
-	public static final int SHOW_APPIRATER = 4;
+	public static final int SHOW_APPIRATER = 15;
 	
 	public static final String DB_PREFERENCES="DB_APPIRATER";
 		

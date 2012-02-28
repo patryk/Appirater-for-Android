@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="appirate_utils_message_before_appname">Jeśli podoba się Tobie aplikacja</string>
+    <string name="appirate_utils_message_after_appname">czy możesz poświęcić chwilę na jej ocenienie? Nie zajmie to więcej niż minutę. Dziękujemy za wsparcie!</string>
+    <string name="button_ok">OK</string>
+    <string name="button_later">Później</string>
+    <string name="button_never">Nie, dzięki</string>
+</resources>

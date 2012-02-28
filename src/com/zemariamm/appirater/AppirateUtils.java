@@ -96,9 +96,9 @@ public class AppirateUtils {
 		}
 		Log.d("Appirater","PackageName: " + packageName);
 		final String marketLink = "market://details?id=" + packageName;
-		String title = context.getString(R.string.appirate_utils_message_before_appname) + " " + appName + context.getString(R.string.appirate_utils_message_after_appname);
+		String title = context.getString(R.string.appirate_utils_message_before_appname) + " " + appName + " " + context.getString(R.string.appirate_utils_message_after_appname);
 		builderInvite.setMessage(title);
-		builderInvite.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+		builderInvite.setPositiveButton(context.getString(R.string.button_ok), new DialogInterface.OnClickListener() {
 			public void onClick(DialogInterface dialog, int id) {
 					parent.processRate();
 					AppirateUtils.markNeverRate(context);
@@ -111,12 +111,12 @@ public class AppirateUtils {
 					}
 					dialog.dismiss();
 			}
-		}).setNeutralButton("Remind me later", new OnClickListener() {
+		}).setNeutralButton(context.getString(R.string.button_later), new OnClickListener() {
 			public void onClick(DialogInterface dialog, int which) {
 				parent.processRemindMe();
 				dialog.dismiss();
 			}
-		}).setNegativeButton("No, Thanks", new OnClickListener() {
+		}).setNegativeButton(context.getString(R.string.button_never), new OnClickListener() {
 			public void onClick(DialogInterface dialog, int which) {
 				AppirateUtils.markNeverRate(context);
 				parent.processNever();
